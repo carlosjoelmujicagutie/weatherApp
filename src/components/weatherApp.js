@@ -15,7 +15,7 @@ export const WeatherApp = () => {
       document.title = `Clima de : ${weather?.name}`;
     },[weather]);
 
-    async function loadInfon(city='london'){
+    async function loadInfon(city='lima'){
         try {
             const request= await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=es&units=metric&appid=c17ae06a65a6dc4263210188f4dceaa4`,{cache:'no-cache'});
             if (request.ok ) {
